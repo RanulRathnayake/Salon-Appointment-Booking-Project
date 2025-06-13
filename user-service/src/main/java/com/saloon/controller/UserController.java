@@ -1,29 +1,48 @@
 package com.saloon.controller;
 
 import com.saloon.model.User;
-import com.saloon.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.saloon.service.UserService;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
+@RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
-    private UserRepository userRepository;
-
+    private final UserService userService;
     @PostMapping("/api/users")
-    public User createUser(@RequestBody User user){
-        return userRepository.save(user);
+    public ResponseEntity<User> createUser(@RequestBody @Valid User user){
+        User createdUser = userService.createUser(user);
+        return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
     @GetMapping("/api/users")
-    public User getUser(){
-        User user = new User();
+    public ResponseEntity<List<User>> getUsers(){
+        List<User> users = userService.getAllUsers();
+        return new ResponseEntity<>(users, HttpStatus.OK);
+    }
 
-        user.setEmail("ranul@gmail.com");
-        user.setFullName("Ranul Rathnayake");
-        user.setContact("+94123456789");
-        user.setRole("Customer");
-        return user;
+    @GetMapping("/api/user/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable("id") long id) throws Exception {
+        User user = userService.getUserById(id);
+        return new ResponseEntity<>(user,HttpStatus.OK);
+    }
+
+    @PutMapping("/api/user/{id}")
+    public ResponseEntity<User> updateUser(@RequestBody User user,
+                           @PathVariable long id) throws Exception {
+        User updatedUser = userService.updateUser(id,user);
+        return new ResponseEntity<>(updatedUser,HttpStatus.OK);
+    }
+
+    @DeleteMapping("api/user/{id}")
+    public ResponseEntity<String> deleteUserById(@PathVariable("id") long id) throws Exception {
+        userService.deleteUser(id);
+        return new ResponseEntity<>("User Deleted",HttpStatus.ACCEPTED);
     }
 }

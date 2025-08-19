@@ -12,10 +12,11 @@ public interface SalonRepository extends JpaRepository<Salon, Long> {
     Salon findByOwnerId(Long id);
 
     @Query(
-            "select s from Salon s where" +
-                    "(lower(s.city) like lower(concat('%', :keyword, '%'))OR " +
-                    "(lower(s.name) like lower(concat('%', :keyword, '%')) OR"+
-                    "(lower(s.address) like lower(concat('%', :keyword, '%')))"
+            "SELECT s FROM Salon s WHERE " +
+                    "(:keyword IS NULL OR " +
+                    "LOWER(s.city) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
+                    "LOWER(s.name) LIKE LOWER(CONCAT('%', :keyword, '%')) OR " +
+                    "LOWER(s.address) LIKE LOWER(CONCAT('%', :keyword, '%')))"
     )
     List<Salon> searchSalons(@Param("keyword") String keyword);
 }

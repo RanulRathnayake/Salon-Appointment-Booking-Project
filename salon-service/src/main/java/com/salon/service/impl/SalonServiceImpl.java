@@ -36,14 +36,14 @@ public class SalonServiceImpl implements SalonService {
     public Salon updateSalon(SalonDTO req, UserDTO user, Long salonId) {
         Salon existingSalon = salonRepository.findById(salonId).orElse(null);
         if (existingSalon != null && existingSalon.getOwnerId().equals(user.getId())){
-            existingSalon.setName(req.getName());
-            existingSalon.setAddress(req.getAddress());
-            existingSalon.setEmail(req.getEmail());
-            existingSalon.setCity(req.getCity());
-            existingSalon.setImages(req.getImages());
-            existingSalon.setOpenTime(req.getOpenTime());
-            existingSalon.setCloseTime(req.getCloseTime());
-            existingSalon.setPhoneNumber(req.getPhoneNumber());
+            existingSalon.setName(req.getName() != null ? req.getName() : existingSalon.getName());
+            existingSalon.setAddress(req.getAddress()!=null ? req.getAddress() : existingSalon.getAddress());
+            existingSalon.setEmail(req.getEmail() !=null ? req.getEmail() : existingSalon.getEmail());
+            existingSalon.setCity(req.getCity() != null ? req.getCity() : existingSalon.getCity());
+            existingSalon.setImages(req.getImages() != null ? req.getImages() : existingSalon.getImages());
+            existingSalon.setOpenTime(req.getOpenTime() != null ? req.getOpenTime() : existingSalon.getOpenTime());
+            existingSalon.setCloseTime(req.getCloseTime() != null ? req.getCloseTime() : existingSalon.getCloseTime());
+            existingSalon.setPhoneNumber(req.getPhoneNumber() != null ? req.getPhoneNumber() : existingSalon.getPhoneNumber());
             //existingSalon.setOwnerId(user.getId());
 
             return salonRepository.save(existingSalon);

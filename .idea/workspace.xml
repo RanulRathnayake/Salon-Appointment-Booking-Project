@@ -5,12 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fac056-7898-43d7-b192-37f9d693b58a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/salon/mapper/SalonMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/CategoryServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/controller/SalonCategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/modal/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/payload/dto/SalonDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/payload/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/java/com/salon/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category-service/src/test/java/com/salon/CategoryServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/ServiceOfferingServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/serviceOffering-service/src/test/java/com/salon/ServiceOfferingServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/salon/controller/SalonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/salon/controller/SalonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/salon/repository/SalonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/salon/repository/SalonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/src/main/java/com/salon/service/impl/SalonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/java/com/salon/service/impl/SalonServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +79,9 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.CategoryServiceApplication.executor": "Run",
     "Application.SalonServiceApplication.executor": "Run",
+    "Application.ServiceOfferingServiceApplication.executor": "Run",
     "Application.UserServiceApplication.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -66,7 +94,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "salon-service",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Spring/Salon-Appointment-Booking-Project/salon-service/src/main/java/com/salon",
+    "last_opened_file_path": "D:/Spring/Salon-Appointment-Booking-Project/category-service/src/main/java/com/salon/payload",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -76,6 +104,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Spring\Salon-Appointment-Booking-Project\category-service\src\main\java\com\salon\payload" />
+      <recent name="D:\Spring\Salon-Appointment-Booking-Project\category-service\src\main\java\com\salon" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\salon-service\src\main\java\com\salon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

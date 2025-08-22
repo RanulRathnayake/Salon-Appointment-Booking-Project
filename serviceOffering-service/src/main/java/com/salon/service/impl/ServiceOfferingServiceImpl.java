@@ -12,11 +12,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+
 @RequiredArgsConstructor
+@Service
 public class ServiceOfferingServiceImpl implements ServiceOfferingService {
 
-    private ServiceOfferingRepository serviceOfferingRepository;
+    private final ServiceOfferingRepository serviceOfferingRepository;
     @Override
     public ServiceOffering createService(
             SalonDTO salonDTO,
@@ -72,7 +73,7 @@ public class ServiceOfferingServiceImpl implements ServiceOfferingService {
     }
 
     @Override
-    public ServiceOffering getserviceById(Long id) throws Exception {
+    public ServiceOffering getServiceById(Long id) throws Exception {
         ServiceOffering serviceOffering = serviceOfferingRepository.findById(id).orElse(null);
         if (serviceOffering==null)
             throw new Exception("Service not exist with id" +id);
@@ -80,8 +81,4 @@ public class ServiceOfferingServiceImpl implements ServiceOfferingService {
         return serviceOffering;
     }
 
-    @Override
-    public List<ServiceOffering> getserviceByIds(List<Long> ids) {
-        return List.of();
-    }
 }

@@ -5,7 +5,6 @@ import com.salon.payload.dto.CategoryDTO;
 import com.salon.payload.dto.SalonDTO;
 import com.salon.payload.dto.ServiceDTO;
 
-import java.util.Calendar;
 import java.util.List;
 
 public interface ServiceOfferingService {
@@ -29,9 +28,10 @@ public interface ServiceOfferingService {
             List<Long> ids
     );
 
-    ServiceOffering getserviceById(
+    ServiceOffering getServiceById(
             Long id
     ) throws Exception;
 
-    List<ServiceOffering> getserviceByIds(List<Long> ids);
+
+    //Must add deleteService
 }

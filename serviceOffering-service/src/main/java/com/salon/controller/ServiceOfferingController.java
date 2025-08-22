@@ -28,7 +28,7 @@ public class ServiceOfferingController {
     public ResponseEntity<ServiceOffering> getServiceById(
             @PathVariable Long id
     ) throws Exception {
-        ServiceOffering serviceOffering = serviceOfferingService.getserviceById(id);
+        ServiceOffering serviceOffering = serviceOfferingService.getServiceById(id);
         return ResponseEntity.ok(serviceOffering);
     }
 
@@ -36,7 +36,7 @@ public class ServiceOfferingController {
     public ResponseEntity<List<ServiceOffering>> getServiceByIds(
             @PathVariable List<Long> ids
     ){
-        List<ServiceOffering> serviceOfferings = serviceOfferingService.getserviceByIds(ids);
+        List<ServiceOffering> serviceOfferings = serviceOfferingService.getServicesByIds(ids);
 
         return ResponseEntity.ok(serviceOfferings);
 

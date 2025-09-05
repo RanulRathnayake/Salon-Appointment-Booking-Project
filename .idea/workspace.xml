@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fac056-7898-43d7-b192-37f9d693b58a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/controller/SalonServiceOfferingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/controller/ServiceOfferingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/controller/ServiceOfferingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/service/ServiceOfferingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/service/ServiceOfferingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/service/impl/ServiceOfferingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/serviceOffering-service/src/main/java/com/salon/service/impl/ServiceOfferingServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

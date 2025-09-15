@@ -5,31 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fac056-7898-43d7-b192-37f9d693b58a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/booking-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/BookingServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/controller/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/domain/BookingStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/dto/BookingDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/dto/BookingReqDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/dto/BookingSlotDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/dto/CategoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/dto/SalonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/dto/ServiceDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/mapper/BookingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/modal/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/modal/SalonReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/repository/BookingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/service/BookingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/service/impl/BookingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/booking-service/src/test/java/com/salon/BookingServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salon/PaymentServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salon/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/test/java/com/salon/PaymentServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -79,6 +64,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.BookingServiceApplication.executor": "Run",
     "Application.CategoryServiceApplication.executor": "Run",
+    "Application.PaymentServiceApplication.executor": "Run",
     "Application.SalonServiceApplication.executor": "Run",
     "Application.ServiceOfferingServiceApplication.executor": "Run",
     "Application.UserServiceApplication.executor": "Run",
@@ -91,9 +77,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "booking-service",
+    "git-widget-placeholder": "payment-service",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Spring/Salon-Appointment-Booking-Project/booking-service/src/main/java/com/salon",
+    "last_opened_file_path": "D:/Spring/Salon-Appointment-Booking-Project/payment-service/src/main/java/com/salon",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -106,11 +92,11 @@
       <recent name="com.salon.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Spring\Salon-Appointment-Booking-Project\payment-service\src\main\java\com\salon" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\booking-service\src\main\java\com\salon" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\serviceOffering-service\src\main\java\com\salon\payload" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\category-service\src\main\java\com\salon\payload" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\category-service\src\main\java\com\salon" />
-      <recent name="D:\Spring\Salon-Appointment-Booking-Project\salon-service\src\main\java\com\salon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\salon-service\src\main\java\com\salon" />

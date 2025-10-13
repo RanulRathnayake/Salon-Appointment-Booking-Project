@@ -5,32 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fac056-7898-43d7-b192-37f9d693b58a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eureka-server/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/salon/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/salon/EurekaServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/salon/GatewayServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/src/test/java/com/salon/GatewayServerApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/category-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salon-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salon-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serviceOffering-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/serviceOffering-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serviceOffering-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/serviceOffering-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,12 +75,18 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.BookingService.executor": "Run",
     "Application.BookingServiceApplication.executor": "Run",
+    "Application.CategoryService.executor": "Run",
     "Application.CategoryServiceApplication.executor": "Run",
     "Application.EurekaServer.executor": "Run",
     "Application.EurekaServerApplication.executor": "Run",
+    "Application.GatewayService.executor": "Run",
+    "Application.PaymentService.executor": "Run",
     "Application.PaymentServiceApplication.executor": "Run",
+    "Application.SalonService.executor": "Run",
     "Application.SalonServiceApplication.executor": "Run",
+    "Application.ServiceOfferingService.executor": "Run",
     "Application.ServiceOfferingServiceApplication.executor": "Run",
+    "Application.UserService.executor": "Run",
     "Application.UserServiceApplication.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -133,7 +126,14 @@
       <recent name="com.salon.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserService">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.GatewayService">
     <configuration name="BookingService" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.salon.BookingServiceApplication" />
       <module name="booking-service" />
@@ -151,6 +151,13 @@
     <configuration name="EurekaServer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.salon.EurekaServerApplication" />
       <module name="eureka-server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayService" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.salon.GatewayServerApplication" />
+      <module name="gateway-server" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,6 +204,7 @@
       <item itemvalue="Application.SalonService" />
       <item itemvalue="Application.ServiceOfferingService" />
       <item itemvalue="Application.UserService" />
+      <item itemvalue="Application.GatewayService" />
       <item itemvalue="Application.BookingService" />
     </list>
   </component>

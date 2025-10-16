@@ -5,7 +5,7 @@ import com.salon.domain.PaymentOrderStatus;
 import com.salon.modal.PaymentOrder;
 import com.salon.payload.dto.BookingDTO;
 import com.salon.payload.dto.UserDTO;
-import com.salon.payload.response.PaymentLinkResponse;
+import com.salon.payload.PaymentLinkResponse;
 import com.salon.repository.PaymentOrderRepository;
 import com.salon.service.PaymentService;
 import com.stripe.Stripe;

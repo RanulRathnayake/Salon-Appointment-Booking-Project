@@ -1,4 +1,4 @@
-package com.salon.payload.response;
+package com.salon.payload;
 
 import lombok.Data;
 

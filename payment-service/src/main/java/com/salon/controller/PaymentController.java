@@ -4,7 +4,7 @@ import com.salon.domain.PaymentMethod;
 import com.salon.modal.PaymentOrder;
 import com.salon.payload.dto.BookingDTO;
 import com.salon.payload.dto.UserDTO;
-import com.salon.payload.response.PaymentLinkResponse;
+import com.salon.payload.PaymentLinkResponse;
 import com.salon.service.PaymentService;
 import com.stripe.exception.StripeException;
 import lombok.RequiredArgsConstructor;

@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fac056-7898-43d7-b192-37f9d693b58a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gateway-server/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/salon/GatewayServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/test/java/com/salon/GatewayServerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/domain/UserRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/salon/payload/dto/SignupDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/payload/dto/SignupDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/salon/service/KeycloakUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/service/KeycloakUserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +90,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Spring/Salon-Appointment-Booking-Project/payment-service/src/main/java/com/salon",
+    "last_opened_file_path": "D:/Spring/Salon-Appointment-Booking-Project/user-service/src/main/java/com/salon",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -112,11 +103,11 @@
       <recent name="com.salon.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Spring\Salon-Appointment-Booking-Project\user-service\src\main\java\com\salon" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\payment-service\src\main\java\com\salon" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\booking-service\src\main\java\com\salon" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\serviceOffering-service\src\main\java\com\salon\payload" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\category-service\src\main\java\com\salon\payload" />
-      <recent name="D:\Spring\Salon-Appointment-Booking-Project\category-service\src\main\java\com\salon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\booking-service\src\main\java\com\salon" />

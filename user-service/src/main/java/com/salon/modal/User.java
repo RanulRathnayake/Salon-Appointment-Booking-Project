@@ -1,5 +1,6 @@
 package com.salon.modal;
 
+import com.salon.domain.UserRole;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,7 +35,7 @@ public class User {
     private String password;
     private String contact;
     @NotBlank(message = "Role is mandatory")
-    private String role;
+    private UserRole role;
     @CreationTimestamp
     private LocalDateTime createAt;
     @UpdateTimestamp

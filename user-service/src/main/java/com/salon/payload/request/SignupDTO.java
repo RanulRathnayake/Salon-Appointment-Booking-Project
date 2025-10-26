@@ -1,5 +1,6 @@
-package com.salon.payload.dto;
+package com.salon.payload.request;
 
+import com.salon.domain.UserRole;
 import lombok.Data;
 
 @Data
@@ -11,6 +12,7 @@ public class SignupDTO {
     private String lastName;
     private String email;
     private String password;
+    private UserRole role;
 }
 
 

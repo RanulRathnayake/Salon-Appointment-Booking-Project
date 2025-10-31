@@ -1,5 +1,6 @@
-package com.salon.payload.dto;
+package com.salon.payload.request;
 
+import com.salon.payload.dto.Credential;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -14,4 +15,5 @@ public class UserRequest {
     private String lastName;
     private String email;
     private List<Credential> credentials = new ArrayList<>();
+    private List<String> realmRoles = new ArrayList<>();
 }

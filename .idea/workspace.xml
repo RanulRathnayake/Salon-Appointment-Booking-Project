@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fac056-7898-43d7-b192-37f9d693b58a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/domain/UserRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/salon/payload/dto/SignupDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/payload/dto/SignupDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/salon/modal/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/modal/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/salon/payload/dto/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/payload/request/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/salon/payload/request/SignupDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/payload/request/SignupDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/salon/service/KeycloakUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/service/KeycloakUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/salon/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/salon/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +117,7 @@
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\salon-service\src\main\java\com\salon" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.salon.domain" />
       <recent name="com.salon.controller" />
     </key>
   </component>
@@ -124,7 +128,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GatewayService">
+  <component name="RunManager" selected="Application.UserService">
     <configuration name="BookingService" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.salon.BookingServiceApplication" />
       <module name="booking-service" />

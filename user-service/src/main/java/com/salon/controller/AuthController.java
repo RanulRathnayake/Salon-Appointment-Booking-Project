@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class AuthController {
 
-
     private final AuthService authService;
 
     @GetMapping
@@ -29,7 +28,6 @@ public class AuthController {
                 .body(new ApiResponse(
 
                         "welcome to zosh property booking system, user api"
-
                 ));
     }
 

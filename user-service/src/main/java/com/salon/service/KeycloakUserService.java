@@ -2,6 +2,7 @@ package com.salon.service;
 
 import com.salon.payload.dto.*;
 import com.salon.payload.request.SignupDTO;
+import com.salon.payload.request.UserRequest;
 import com.salon.payload.response.TokenResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.*;
@@ -22,12 +23,12 @@ public class KeycloakUserService {
 
     private static final String TOKEN_URL = KEYCLOAK_BASE_URL+"/realms/master/protocol/openid-connect/token";
     private static final String CLIENT_ID = "salon-booking-client"; // Replace with your client ID
-    private static final String CLIENT_SECRET = "txByPyRgUEWZiliRz9OQLXuPE7P5xpZ9"; // Replace with your client secret
+    private static final String CLIENT_SECRET = "njyMKqHUwnLnz1Gqsu3o1lJUmAQMCpbt"; // Replace with your client secret
     private static final String GRANT_TYPE = "password";
     private static final String scope = "openid email profile"; // Adjust grant type if necessary
-    private static final String username = "admin@gmail.com";
+    private static final String username = "ranul";
     private static final String password = "admin";
-    private static  final String clientId = "a43dab90-8534-40ca-b1f1-96f062e16674";
+    private static  final String clientId = "a116fcb0-29cf-4b6b-bdb9-075c04a5e88d";
 
     private final RestTemplate restTemplate;
 
@@ -48,9 +49,6 @@ public class KeycloakUserService {
         userRequest.setEnabled(true);
         userRequest.setUsername(signupDTO.getUsername());
         userRequest.getCredentials().add(credential);
-        userRequest.setFirstName(signupDTO.getFirstName());
-        userRequest.setLastName(signupDTO.getLastName());
-
 
 
         RestTemplate restTemplate = new RestTemplate();

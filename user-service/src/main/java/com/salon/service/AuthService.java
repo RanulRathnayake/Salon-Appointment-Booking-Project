@@ -2,7 +2,7 @@ package com.salon.service;
 
 
 import com.salon.payload.response.AuthResponse;
-import com.salon.payload.request.SignupDTO;
+import com.salon.payload.dto.SignupDTO;
 
 public interface AuthService {
     AuthResponse login(String username, String password) throws Exception;

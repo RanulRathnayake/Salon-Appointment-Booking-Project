@@ -1,7 +1,7 @@
 package com.salon.service.impl;
 
 import com.salon.modal.User;
-import com.salon.payload.request.SignupDTO;
+import com.salon.payload.dto.SignupDTO;
 import com.salon.payload.response.AuthResponse;
 import com.salon.payload.response.TokenResponse;
 import com.salon.repository.UserRepository;

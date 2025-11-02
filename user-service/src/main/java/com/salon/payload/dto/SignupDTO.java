@@ -1,4 +1,4 @@
-package com.salon.payload.request;
+package com.salon.payload.dto;
 
 import com.salon.domain.UserRole;
 import lombok.Data;

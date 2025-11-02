@@ -1,4 +1,4 @@
-package com.salon.payload.request;
+package com.salon.payload.dto;
 
 
 import jakarta.validation.constraints.Email;

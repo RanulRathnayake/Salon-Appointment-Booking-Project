@@ -31,6 +31,7 @@ public class User {
     @NotBlank(message = "Password is mandatory")
     private String password;
     private String contact;
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UserRole role;
     @CreationTimestamp

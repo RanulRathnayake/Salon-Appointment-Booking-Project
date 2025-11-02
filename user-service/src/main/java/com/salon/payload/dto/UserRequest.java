@@ -1,6 +1,5 @@
-package com.salon.payload.request;
+package com.salon.payload.dto;
 
-import com.salon.payload.dto.Credential;
 import lombok.Data;
 
 import java.util.ArrayList;

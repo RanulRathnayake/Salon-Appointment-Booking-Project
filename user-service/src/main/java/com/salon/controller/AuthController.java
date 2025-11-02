@@ -1,8 +1,8 @@
 package com.salon.controller;
 
 
-import com.salon.payload.request.SignupDTO;
-import com.salon.payload.request.LogintDTO;
+import com.salon.payload.dto.SignupDTO;
+import com.salon.payload.dto.LogintDTO;
 import com.salon.payload.response.ApiResponse;
 import com.salon.payload.response.ApiResponseBody;
 import com.salon.payload.response.AuthResponse;

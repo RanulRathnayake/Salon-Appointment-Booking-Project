@@ -1,8 +1,8 @@
 package com.salon.service;
 
 import com.salon.payload.dto.*;
-import com.salon.payload.request.SignupDTO;
-import com.salon.payload.request.UserRequest;
+import com.salon.payload.dto.SignupDTO;
+import com.salon.payload.dto.UserRequest;
 import com.salon.payload.response.TokenResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.*;
@@ -22,7 +22,7 @@ public class KeycloakUserService {
     private static final String KEYCLOAK_ADMIN_API = KEYCLOAK_BASE_URL+"/admin/realms/master/users";
 
     private static final String TOKEN_URL = KEYCLOAK_BASE_URL+"/realms/master/protocol/openid-connect/token";
-    private static final String CLIENT_ID = "salon-booking-client"; // Replace with your client ID
+    private static final String CLIENT_ID = "Salon-booking-client"; // Replace with your client ID
     private static final String CLIENT_SECRET = "njyMKqHUwnLnz1Gqsu3o1lJUmAQMCpbt"; // Replace with your client secret
     private static final String GRANT_TYPE = "password";
     private static final String scope = "openid email profile"; // Adjust grant type if necessary
@@ -56,7 +56,7 @@ public class KeycloakUserService {
         // Set headers
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.setBearerAuth("ACCESS_TOKEN"); //remove ""
+        headers.setBearerAuth(ACCESS_TOKEN);
 
         // Create HTTP entity
         HttpEntity<UserRequest> requestEntity = new HttpEntity<>(userRequest, headers);
@@ -221,5 +221,35 @@ public class KeycloakUserService {
         }
     }
 
+
+    public KeycloakUserinfo fetchUserProfileByJwt(String token) throws Exception {
+        System.out.println("keycloak profile token "+ token);
+        String url = KEYCLOAK_BASE_URL+"/realms/master/protocol/openid-connect/userinfo";
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.add("Authorization",  token);
+
+
+        // Create an HttpEntity with the headers
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        try {
+            // Send the GET request
+            ResponseEntity<KeycloakUserinfo> response = restTemplate.exchange(
+                    url,
+                    HttpMethod.GET,
+                    entity,
+                    KeycloakUserinfo.class
+            );
+
+            // Extract and return the first user object
+            return response.getBody();
+
+        } catch (Exception e) {
+            System.out.println("Failed to fetch user details: " + e.getMessage());
+            throw new Exception("Failed to fetch user details: " + e.getMessage());
+        }
+    }
 
 }

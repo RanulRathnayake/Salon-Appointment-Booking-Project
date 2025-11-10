@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -24,7 +25,7 @@ public class Booking {
     private LocalDateTime endTime;
 
     @ElementCollection
-    private Set<Long> serviceIds;
+    private List<Long> serviceIds;
 
     private BookingStatus status = BookingStatus.PENDING;
 

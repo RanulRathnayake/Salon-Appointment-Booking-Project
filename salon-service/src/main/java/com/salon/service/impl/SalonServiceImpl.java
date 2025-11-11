@@ -33,9 +33,12 @@ public class SalonServiceImpl implements SalonService {
     }
 
     @Override
-    public Salon updateSalon(SalonDTO req, UserDTO user, Long salonId) {
+    public Salon updateSalon(SalonDTO req, UserDTO user, Long salonId) throws Exception {
         Salon existingSalon = salonRepository.findById(salonId).orElse(null);
-        if (existingSalon != null && existingSalon.getOwnerId().equals(user.getId())){
+        if(!existingSalon.getOwnerId().equals(user.getId())){
+            throw new Exception("You don't have permission to update this salon");
+        }
+        if (existingSalon != null){
             existingSalon.setName(req.getName() != null ? req.getName() : existingSalon.getName());
             existingSalon.setAddress(req.getAddress()!=null ? req.getAddress() : existingSalon.getAddress());
             existingSalon.setEmail(req.getEmail() !=null ? req.getEmail() : existingSalon.getEmail());

@@ -28,8 +28,8 @@ public class BookingServiceImpl implements BookingService {
     public Booking createBooking(BookingReqDTO booking,
                                  UserDTO user,
                                  SalonDTO salon,
-                                 Set<ServiceDTO> serviceDTOSet) throws Exception {
-        int totalDuration = serviceDTOSet.stream()
+                                 List<ServiceDTO> serviceDTOList) throws Exception {
+        int totalDuration = serviceDTOList.stream()
                 .mapToInt(ServiceDTO::getDuration)
                 .sum();
         LocalDateTime bookingStartTime = booking.getStartTime();
@@ -37,13 +37,13 @@ public class BookingServiceImpl implements BookingService {
 
         Boolean isSlotAvailable = isTimeSlotAvailable(salon, bookingStartTime,bookingEndTime);
 
-        int totalPrice = serviceDTOSet.stream()
+        int totalPrice = serviceDTOList.stream()
                 .mapToInt(ServiceDTO::getPrice)
                 .sum();
 
-        Set<Long> idList = serviceDTOSet.stream()
+        List<Long> idList = serviceDTOList.stream()
                 .map(ServiceDTO::getId)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toList());
 
         Booking newBooking = new Booking();
         newBooking.setCustomerId(user.getId());

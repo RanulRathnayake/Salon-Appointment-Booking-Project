@@ -43,6 +43,7 @@ public class SecurityConfig {
                                         "/api/payments/**",
                                         "/api/service-offering/**",
                                         "/api/users/**",
+                                        "/api/user/**",
                                         "/api/reviews/**"
                                 ).hasAnyRole("CUSTOMER","SALON_OWNER","ADMIN")
                                 .pathMatchers("/api/categories/salon-owner/**",

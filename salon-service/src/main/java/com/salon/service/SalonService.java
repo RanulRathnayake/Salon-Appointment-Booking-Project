@@ -11,7 +11,7 @@ public interface SalonService {
 
     Salon createSalon(SalonDTO salon, UserDTO user);
 
-    Salon updateSalon(SalonDTO req, UserDTO user, Long salonId);
+    Salon updateSalon(SalonDTO req, UserDTO user, Long salonId) throws Exception;
 
     List<Salon> getAllSalon();
 

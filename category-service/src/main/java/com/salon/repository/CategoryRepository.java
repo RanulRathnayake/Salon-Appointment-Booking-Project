@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
-    List<com.salon.modal.Category> findBySalonId(Long salonId);
+    List<Category> findBySalonId(Long salonId);
+    Category findByIdAndSalonId(Long id, Long salonId);
 }

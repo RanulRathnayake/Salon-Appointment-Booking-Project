@@ -1,11 +1,16 @@
 package com.salon.controller;
 
 import com.salon.domain.BookingStatus;
+import com.salon.domain.PaymentMethod;
 import com.salon.dto.*;
 import com.salon.mapper.BookingMapper;
 import com.salon.modal.Booking;
 import com.salon.modal.SalonReport;
 import com.salon.service.BookingService;
+import com.salon.service.client.PaymentFeignClient;
+import com.salon.service.client.SalonFeignClient;
+import com.salon.service.client.ServiceOfferingFeignClient;
+import com.salon.service.client.UserFeignClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,37 +27,38 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class BookingController {
     private final BookingService bookingService;
+    private final UserFeignClient userFeignClient;
+    private final SalonFeignClient salonFeignClient;
+    private final ServiceOfferingFeignClient serviceOfferingFeignClient;
+    private final PaymentFeignClient paymentFeignClient;
 
     @PostMapping()
-    public ResponseEntity<Booking> createBooking(
+    public ResponseEntity<PaymentLinkResponse> createBooking(
             @RequestParam Long salonId,
-            @RequestBody BookingReqDTO bookinDTO
+            @RequestParam PaymentMethod paymentMethod,
+            @RequestBody BookingReqDTO bookingReqDTO,
+            @RequestHeader("Authorization") String jwt
     ) throws Exception {
-        UserDTO userDTO = new UserDTO();
-        userDTO.setId(1L);
+        UserDTO userDTO = userFeignClient.getUserProfile(jwt).getBody();
 
-        SalonDTO salonDTO = new SalonDTO();
-        salonDTO.setId(salonId);
-        salonDTO.setOpenTime(LocalDateTime.now());
-        salonDTO.setCloseTime(LocalDateTime.now().plusHours(12));
+        SalonDTO salonDTO = salonFeignClient.getSalonById(salonId).getBody();
 
-        ServiceDTO serviceDTO = new ServiceDTO();
-        serviceDTO.setId(1L);
-        serviceDTO.setPrice(500);
-        serviceDTO.setDuration(45);
-        serviceDTO.setName("Hair cut for men");
+        List<ServiceDTO> serviceDTOList = serviceOfferingFeignClient.getServiceByIds(bookingReqDTO.getServiceIds()).getBody();
 
-        Set<ServiceDTO> serviceDTOSet = new HashSet<>();
-        serviceDTOSet.add(serviceDTO);
+        Booking booking = bookingService.createBooking(bookingReqDTO, userDTO, salonDTO, serviceDTOList);
 
-        Booking booking = bookingService.createBooking(bookinDTO, userDTO, salonDTO, serviceDTOSet);
-        return ResponseEntity.ok(booking);
+        BookingDTO bookingDTO = BookingMapper.toDTO(booking);
+
+        PaymentLinkResponse paymentLinkResponse = paymentFeignClient.createPaymentLink(bookingDTO, paymentMethod).getBody(); // have to pass jwt or not? Check
+
+        return ResponseEntity.ok(paymentLinkResponse);
     }
 
     @GetMapping("/customer")
-    public ResponseEntity<Set<BookingDTO>> getBookingsByCustomer(){
-        UserDTO userDTO = new UserDTO();
-        userDTO.setId(1L);
+    public ResponseEntity<Set<BookingDTO>> getBookingsByCustomer(
+            @RequestHeader("Authorization") String jwt
+    ) throws Exception {
+        UserDTO userDTO = userFeignClient.getUserProfile(jwt).getBody();
 
         List<Booking> bookings = bookingService.getAllBookingByCustomer(userDTO.getId());
 
@@ -60,9 +66,10 @@ public class BookingController {
     }
 
     @GetMapping("/salon")
-    public ResponseEntity<Set<BookingDTO>> getBookingsBySalon(){
-        SalonDTO salonDTO = new SalonDTO();
-        salonDTO.setId(1L);
+    public ResponseEntity<Set<BookingDTO>> getBookingsBySalon(
+            @RequestHeader("Authorization") String jwt
+    ) throws Exception {
+        SalonDTO salonDTO = salonFeignClient.getSalonByOwnerId(jwt).getBody();
 
         List<Booking> bookings = bookingService.getAllBookingBySalon(salonDTO.getId());
         return ResponseEntity.ok(getBookingDTO(bookings));
@@ -96,8 +103,12 @@ public class BookingController {
     }
 
     @GetMapping("/report")
-    public ResponseEntity<SalonReport> getSalonReport(){
-        SalonReport salonReport =bookingService.getSalonReport(1L);
+    public ResponseEntity<SalonReport> getSalonReport(
+            @RequestHeader("Authorization") String jwt
+    ) throws Exception {
+        SalonDTO salonDTO = salonFeignClient.getSalonByOwnerId(jwt).getBody();
+
+        SalonReport salonReport =bookingService.getSalonReport(salonDTO.getId());
         return ResponseEntity.ok(salonReport);
     }
 

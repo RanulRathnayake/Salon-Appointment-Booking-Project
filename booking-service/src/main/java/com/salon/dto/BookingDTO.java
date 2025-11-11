@@ -1,11 +1,10 @@
 package com.salon.dto;
 
 import com.salon.domain.BookingStatus;
-import jakarta.persistence.ElementCollection;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.Set;
+import java.util.List;
 
 @Data
 public class BookingDTO {
@@ -20,7 +19,7 @@ public class BookingDTO {
 
     private LocalDateTime endTime;
 
-    private Set<Long> serviceIds;
+    private List<Long> serviceIds;
 
     private BookingStatus status = BookingStatus.PENDING;
 

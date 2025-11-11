@@ -33,7 +33,7 @@ public class BookingController {
     private final PaymentFeignClient paymentFeignClient;
 
     @PostMapping()
-    public ResponseEntity<Booking> createBooking(
+    public ResponseEntity<PaymentLinkResponse> createBooking(
             @RequestParam Long salonId,
             @RequestParam PaymentMethod paymentMethod,
             @RequestBody BookingReqDTO bookingReqDTO,
@@ -49,9 +49,9 @@ public class BookingController {
 
         BookingDTO bookingDTO = BookingMapper.toDTO(booking);
 
-        paymentFeignClient.createPaymentLink(bookingDTO, paymentMethod); // have to pass jwt or not? Check
+        PaymentLinkResponse paymentLinkResponse = paymentFeignClient.createPaymentLink(bookingDTO, paymentMethod).getBody(); // have to pass jwt or not? Check
 
-        return ResponseEntity.ok(booking);
+        return ResponseEntity.ok(paymentLinkResponse);
     }
 
     @GetMapping("/customer")

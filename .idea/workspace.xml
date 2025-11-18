@@ -5,27 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fac056-7898-43d7-b192-37f9d693b58a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/review-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/ReviewServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/controller/ReviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/modal/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/payload/dto/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/payload/dto/ReviewDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/payload/dto/SalonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/payload/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/repository/ReviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/service/ReviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/service/client/SalonFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/service/client/UserFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/salon/service/imp/ReviewServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/test/java/com/salon/ReviewServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/config/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/messaging/BookingEventConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/modal/PaymentOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/salon/config/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/salon/messaging/NotificationEventConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salon/config/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salon/messaging/BookingEventProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salon/messaging/NotificationEventProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salon/payload/dto/NotificationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/domain/BookingStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/domain/BookingStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/service/impl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/salon/service/impl/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/salon/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/salon/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +109,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Spring/Salon-Appointment-Booking-Project/review-service/src/main/java/com/salon/service/client",
+    "last_opened_file_path": "D:/Spring/Salon-Appointment-Booking-Project/notification-service/src/main/java/com/salon",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -123,11 +122,11 @@
       <recent name="com.salon.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Spring\Salon-Appointment-Booking-Project\notification-service\src\main\java\com\salon" />
+      <recent name="D:\Spring\Salon-Appointment-Booking-Project\booking-service\src\main\java\com\salon" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\review-service\src\main\java\com\salon\service\client" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\notification-service\src\main\java\com\salon\payload" />
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\payment-service\src\main\java\com\salon\service" />
-      <recent name="D:\Spring\Salon-Appointment-Booking-Project\booking-service\src\main\java\com\salon\service" />
-      <recent name="D:\Spring\Salon-Appointment-Booking-Project\category-service\src\main\java\com\salon\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Spring\Salon-Appointment-Booking-Project\booking-service\src\main\java\com\salon" />
@@ -147,7 +146,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReviewService">
+  <component name="RunManager" selected="Application.NotificationServiceApplication">
     <configuration name="BookingService" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.salon.BookingServiceApplication" />
       <module name="booking-service" />

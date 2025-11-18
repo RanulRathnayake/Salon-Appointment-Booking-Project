@@ -2,6 +2,8 @@ package com.salon.service.impl;
 
 import com.salon.domain.PaymentMethod;
 import com.salon.domain.PaymentOrderStatus;
+import com.salon.messaging.BookingEventProducer;
+import com.salon.messaging.NotificationEventProducer;
 import com.salon.modal.PaymentOrder;
 import com.salon.payload.dto.BookingDTO;
 import com.salon.payload.dto.UserDTO;
@@ -9,10 +11,12 @@ import com.salon.payload.PaymentLinkResponse;
 import com.salon.repository.PaymentOrderRepository;
 import com.salon.service.PaymentService;
 import com.stripe.Stripe;
+import com.stripe.StripeClient;
 import com.stripe.exception.StripeException;
 import com.stripe.model.checkout.Session;
 import com.stripe.param.checkout.SessionCreateParams;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +25,8 @@ import org.springframework.stereotype.Service;
 public class PaymentServiceImpl implements PaymentService {
 
     private final PaymentOrderRepository paymentOrderRepository;
+    private final BookingEventProducer bookingEventProducer;
+    private final NotificationEventProducer notificationEventProducer;
 
     @Value("${stripe.api.key}")
     private  String stripeSecretKey;
@@ -101,6 +107,18 @@ public class PaymentServiceImpl implements PaymentService {
 
         if(paymentOrder.getStatus().equals(PaymentOrderStatus.PENDING)){
             if(paymentOrder.getPaymentMethod().equals(PaymentMethod.STRIPE)){
+                StripeClient stripeClient = new StripeClient(stripeSecretKey);
+//                code for create Stripe payment
+//                Then add condition to check payment status if "captured" then do below
+//                This is where RabbitMQ function must run
+                bookingEventProducer.sentBookingUpdateEvent(paymentOrder);
+
+                notificationEventProducer.sentNotificationEvent(
+                        paymentOrder.getBookingId(),
+                        paymentOrder.getUserId(),
+                        paymentOrder.getSalonId()
+                );
+
                 paymentOrder.setStatus(PaymentOrderStatus.SUCCESS);
                 paymentOrderRepository.save(paymentOrder);
                 return true;

@@ -3,6 +3,6 @@ package com.salon.domain;
 public enum BookingStatus {
 
     PENDING,
-    COMFIRMED,
+    CONFIRMED,
     CANCELLED
 }

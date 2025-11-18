@@ -62,7 +62,6 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(Arrays.asList(
                         "http://localhost:3000/",
-                        "https://salon-booking-three.vercel.app",
                         "http://localhost:5170"
                 )
         );
